@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>School Managment System</title>
+       
+		<link rel="stylesheet" href="SMS.css">
+    
+    
+    </head>
+
+
+	<body>
+		
+        
+        <div style="margin-top: 20px;" >
+            <h4 class="">School Mangment System</h4>
+            <p style="margin-left: 50px; font-size: small;">Dina Alwaneh</p>
+	    </div>
+        <!-- Add a Student -->
+        <!-- Title -->
+        <div class="title" style="margin-top: 20px;" >
+		    <h4 class="h4">student information</h4>
+	    </div>
+
+		<div class="container center">
+	
+			<form>
+				<!-- student name -->
+				<div class="from-control">
+					<label for="name">Student Name</label>
+					<input type="text" id="name" placeholder="jo aqra"  style="margin-left: 16px; "/>
+				</div>
+				<!-- student name -->
+
+				<!-- student id -->
+				<div class="from-control">
+					<label for="idNumber">Student ID</label>
+					<input type="number" id="idNumber" placeholder="411420876" style="margin-left: 35px; " />
+				</div>
+				<!-- student id -->
+
+				<!-- student gdpa -->
+				<div class="from-control">
+					<label for="gdpa">Student GDPA</label>
+					<input type="number" id="gdpa" placeholder="3.50" style="margin-left: 16px;" />
+				</div>
+				<!-- student gdpa -->
+
+				<button id="submit" type="button">Add</button>
+				<button id="ShowList" type="button" onclick="show()">ShowList</button>
+				<button id="update" type="button" onclick="removeclass1()">update</button>
+				<button id="delete" type="button" onclick="removeclass2()" >delete</button>
+			</form>
+		</div>
+
+         <!--table to display list of student-->
+		<table id="display" class="disnone" >
+            <div class="title disnone" id="title2" >
+                <h4 class="h4">list of added students</h4>
+            </div>
+
+            <tr >
+                <th style="background-color: rgb(202, 240, 245);" >
+                    Name
+                </th>
+                <th style="background-color: rgb(202, 240, 245);">
+                    ID
+                </th>
+                <th style="background-color: rgb(202, 240, 245);">
+                    GDPA
+                </th>
+            </tr>
+	   </table>
+
+       <!--Updat a Student-->
+       <!--Title-->
+        <div class="title disnone" id="iml" >
+            <h4 class="h4">update a student</h4>
+        </div>
+
+        <div class="container center disnone " id="UpdatForm" style="height: 230px; ">
+            <form>
+                <!-- student id -->
+                <div class="from-control" >
+                    <label for="updateid">student id :</label>
+                    <input type="number" id="updateid" placeholder="11925622" />
+                </div>
+
+                <!-- student name -->
+                <div class="from-control" >
+                    <label for="newname">new Name : </label>
+                    <input type="text" id="newname" placeholder="jo aqra" style=" margin-left:20px;"/>
+                </div>
+              
+                <!-- student gdpa -->
+                <div class="from-control" >
+                    <label for="newgdpa">new  GDPA :</label>
+                    <input type="number" id="newgdpa" placeholder="3.50" style=" margin-left:20px;"  />
+                </div>
+            </form>
+            
+            <button id="done" onclick=" update()" >done</button>
+            <button id="deleteRow" onclick="deleteRow()"  style="margin-right: 5px; background-color: rgb(202, 240, 245);"  >deleteRow's</button>
+
+        </div>
+
+        <!--Title-->
+        <div class="title disnone" id="imll" >
+            <h4 class="h4">delete a student</h4>
+        </div>
+
+        <!--delete a Student-->
+        <div class="container center  disnone" id="deleteStudent" style="height: 150px; ">
+
+            <form>
+                <div class="from-control" >
+                    <label for="deleteS">student id :</label>
+                    <input type="number" id="deleteS" placeholder="11925622" />
+                </div>
+            </form>
+
+            <button id="done" onclick="deleteStudent()" >done</button>
+            <button id="deleteRow" onclick="deleteRow()"  style="margin-right:5px;  background-color: rgb(202, 240, 245);" >deleteRow's</button>
+
+        </div>
+
+        <!--Finaly ♥-->
+        <h1 style="text-align:center; margin-top:5%;">Bilt With <span style="color: rgb(107, 14, 14); font-size:50px;">♥</span> </h1>
+
+	 <br>
+	 <br>
+	 <br>
+            
+            
+        <!--
+
+        // This week task:
+        // Show list of students 
+        // Update student
+        // Delete student
+
+        // 10 marks
+        // 1) based on the follwoing:
+        // a) easy to use  and prettyu look 3
+        // b) resposnive design 2
+
+        // c) clean code 2
+        // d) show list for the user 1
+        // e) update 1
+        // f) delete 1
+
+        // Deeadline: 20/2, on github.
+        -->
+        
+        <script src="SMS.js"></script>
+	</body>
+</html>
